@@ -125,3 +125,22 @@ $('.demo-modal-form .cross-modal').click(()=>{
     $(".demo-modal-form").css("display", "none");
     $("body").css("overflow", "auto");
 });
+
+
+
+
+// form submit
+$(function(){
+    $(".demo-modal-form form").on("submit", function(e){
+        e.preventDefault();
+
+        $.ajax({
+            type: 'post',
+            url: 'mail.php',
+            data: $('form').serialize(),
+            success: function(){
+                alert("Form Was Submitted");
+            }
+        });
+    })
+})
