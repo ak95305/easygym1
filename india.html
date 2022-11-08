@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Bootstrap v5.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/brands.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <title>Easy Gym Software</title>
+</head>
+
+<body>
+    <!-- <div id="preloader">
+        <svg xmlns="http://www.w3.org/2000/svg" width="280.4179992675781" height="104.197998046875"
+            viewBox="0 0 280.418 104.198">
+            <g id="Group_5" data-name="Group 5" transform="translate(0 -0.1)">
+                <g id="Group_3" data-name="Group 3">
+                    <g id="Group_1" data-name="Group 1">
+                        <path id="Path_1" data-name="Path 1"
+                            d="M13.1,78.4c-4.6,0-7.9-.7-9.8-2.2S.5,72.4.5,69.2a35.429,35.429,0,0,1,.8-6l10-47.4c1.1-5.2,3-9.1,5.6-11.5C19.5,1.8,23.8.6,29.6.6H83.2c4,0,6.9.7,8.5,2.2,1.7,1.5,2.5,3.8,2.5,6.9a27.181,27.181,0,0,1-.6,5.5L87,46.2H38l3-13.7H65.8l1.5-7.7a6.053,6.053,0,0,0,.2-1.5c0-1.4-.9-2.2-2.8-2.2H39.3a5.013,5.013,0,0,0-3.1.8,6,6,0,0,0-1.4,3l-6,28.6a14.968,14.968,0,0,0-.3,1.8c0,1.4,1,2.2,2.9,2.2h50L77.1,78.3h-64Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-1"></path>
+                        <path id="Path_2" data-name="Path 2"
+                            d="M100.6,78.4q-4.05,0-5.7-1.5a5.494,5.494,0,0,1-1.7-4.3,21.112,21.112,0,0,1,.5-3.7l2.6-12.2A29.852,29.852,0,0,1,97.7,52a7.515,7.515,0,0,1,2-3,6.215,6.215,0,0,1,2.9-1.5,16.079,16.079,0,0,1,4.2-.5h23.6l-1.9,9H114.2a2.575,2.575,0,0,0-1.8.5,4.272,4.272,0,0,0-.8,1.9l-.7,3.3a8.915,8.915,0,0,0-.2,1.1c0,.9.6,1.3,1.8,1.3h19.3L136.3,43a2.219,2.219,0,0,0,.1-.9c0-1.1-.7-1.6-2-1.6H101.5l2.7-12.6h42.2c2.9,0,5,.5,6.2,1.5s1.8,2.5,1.8,4.7a16.368,16.368,0,0,1-.4,3.8l-8.6,40.7H100.6Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-2"></path>
+                        <path id="Path_3" data-name="Path 3"
+                            d="M154.8,78.4l2.8-13.6h32.8a2.973,2.973,0,0,0,1.9-.4,3.023,3.023,0,0,0,.9-1.8l.7-3.2v-.7c0-.8-.6-1.2-1.7-1.2H167a8.1,8.1,0,0,1-5-1.3,4.9,4.9,0,0,1-1.5-3.8v-1a4.253,4.253,0,0,1,.2-1.1l2.9-13.7c.7-3,1.8-5.2,3.5-6.7,1.7-1.4,4.3-2.2,7.9-2.2h42.5l-2.8,13.1H181.9a2.621,2.621,0,0,0-2.9,2.4l-.6,2.9a1.483,1.483,0,0,0-.1.7c0,.9.6,1.4,1.7,1.4h25.7c2.3,0,4,.5,5,1.4a4.755,4.755,0,0,1,1.5,3.8v1a3.553,3.553,0,0,1-.2,1l-3,14.2c-.7,3-1.8,5.2-3.5,6.6s-4.3,2.2-7.8,2.2Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-3"></path>
+                        <path id="Path_4" data-name="Path 4"
+                            d="M213.2,99.6l3.1-14.4h32a2.814,2.814,0,0,0,2-.6,3.731,3.731,0,0,0,1-2l.9-4.3H225.6q-4.35,0-6.3-1.5a5.523,5.523,0,0,1-1.8-4.5,25.691,25.691,0,0,1,.5-3.9l8.6-40.7h16.9l-7.4,34.7a3.083,3.083,0,0,0-.1,1c0,1,.7,1.5,2,1.5h17l7.9-37.2h16.9L266.6,89.6a13.941,13.941,0,0,1-3.7,7.5q-2.55,2.4-8.1,2.4H213.2Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-4"></path>
+                    </g>
+                    <g id="Group_2" data-name="Group 2">
+                        <path id="Path_5" data-name="Path 5"
+                            d="M121.9,98.7l.6-3h6.4a.749.749,0,0,0,.5-.1.52.52,0,0,0,.2-.4l.3-1.2v-.2c0-.2-.1-.3-.4-.3h-4.7a1.609,1.609,0,0,1-1.1-.3,1.389,1.389,0,0,1-.3-1.5l.7-3.5a3.376,3.376,0,0,1,.8-1.7,2.546,2.546,0,0,1,1.9-.6H135l-.6,2.9H128c-.2,0-.3,0-.4.1s-.1.2-.2.4l-.2,1.2v.2c0,.2.1.3.4.3h4.7a2.133,2.133,0,0,1,1.2.3,1.333,1.333,0,0,1,.4,1,.9.9,0,0,1-.1.5l-.8,3.7a3.376,3.376,0,0,1-.8,1.7,2.546,2.546,0,0,1-1.9.6h-8.4Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-5"></path>
+                        <path id="Path_6" data-name="Path 6"
+                            d="M136,98.7a1.737,1.737,0,0,1-1.2-.3,1.268,1.268,0,0,1-.4-.9,1.952,1.952,0,0,1,.1-.7l1.2-5.9a2.649,2.649,0,0,1,.7-1.4,2.07,2.07,0,0,1,1.5-.5h6.6a1.737,1.737,0,0,1,1.2.3,1.222,1.222,0,0,1,.3.9,1.7,1.7,0,0,1-.1.7l-1.2,5.9a2.649,2.649,0,0,1-.7,1.4,2.07,2.07,0,0,1-1.5.5Zm6.6-6.4v-.2c0-.2-.1-.3-.4-.3h-3c-.2,0-.3,0-.4.1s-.1.2-.2.4l-.7,3.1v.2c0,.2.1.3.4.3h3c.2,0,.3,0,.4-.1s.1-.2.2-.4Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-6"></path>
+                        <path id="Path_7" data-name="Path 7"
+                            d="M146.3,98.7l2.4-11.4a3,3,0,0,1,.8-1.7,2.456,2.456,0,0,1,1.5-.5h3.5l-.5,2.3h-1.7c-.2,0-.3,0-.4.1s-.1.2-.2.4l-.3,1.2h2.1l-.5,2.4h-2l-1.5,7.2Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-7"></path>
+                        <path id="Path_8" data-name="Path 8"
+                            d="M154.7,98.7a1.737,1.737,0,0,1-1.2-.3,1.268,1.268,0,0,1-.4-.9,1.952,1.952,0,0,1,.1-.7l2.2-10.4h3.2l-.6,2.7h2l-.5,2.4h-2l-.9,4.3V96c0,.2.1.3.4.3h1.5l-.5,2.4Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-8"></path>
+                        <path id="Path_9" data-name="Path 9"
+                            d="M168.7,98.7l-.3-6-3.1,6h-4l-.5-9.6h3.5v6.3l3.1-6.3h3.8l.3,6.3,2.9-6.3h3.3l-4.8,9.6Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-9"></path>
+                        <path id="Path_10" data-name="Path 10"
+                            d="M178.1,98.7a1.609,1.609,0,0,1-1.1-.3,1.136,1.136,0,0,1-.3-.8,1.952,1.952,0,0,1,.1-.7l.5-2.3a4.649,4.649,0,0,1,.3-.9,2.092,2.092,0,0,1,.4-.6,3.329,3.329,0,0,1,.6-.3,1.949,1.949,0,0,1,.8-.1h4.5l-.4,1.7h-2.7c-.2,0-.3,0-.3.1s-.1.2-.2.4l-.1.6v.2c0,.2.1.2.3.2h3.7l.9-4v-.2c0-.2-.1-.3-.4-.3h-6.3l.5-2.4h8a1.737,1.737,0,0,1,1.2.3,1.222,1.222,0,0,1,.3.9,1.7,1.7,0,0,1-.1.7l-1.6,7.7h-8.6Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-10"></path>
+                        <path id="Path_11" data-name="Path 11"
+                            d="M188.3,98.7l2-9.6h3.1l-.2,1.1a3.018,3.018,0,0,1,.8-.8,2.016,2.016,0,0,1,1.1-.3h2.4l-.6,2.7h-3.4a.634.634,0,0,0-.6.5l-1.3,6.4h-3.3Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-11"></path>
+                        <path id="Path_12" data-name="Path 12"
+                            d="M198.6,98.7a1.737,1.737,0,0,1-1.2-.3,1.039,1.039,0,0,1-.4-.8,1.952,1.952,0,0,1,.1-.7l1.2-5.9a2.649,2.649,0,0,1,.7-1.4,2.173,2.173,0,0,1,1.6-.5h6.6a1.8,1.8,0,0,1,1.1.3,1.136,1.136,0,0,1,.3.8,1.952,1.952,0,0,1-.1.7l-.8,3.8h-6L202,93h3.1l.2-1v-.2a.265.265,0,0,0-.3-.3h-3.1c-.2,0-.3,0-.4.1s-.1.2-.2.4l-.7,3.5v.2c0,.2.1.3.4.3h6.2l-.5,2.6h-8.1Z"
+                            stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-12"></path>
+                    </g>
+                </g>
+                <g id="Group_4" data-name="Group 4">
+                    <path id="Path_13" data-name="Path 13"
+                        d="M75.7,98.7a2.076,2.076,0,0,1-1.5-.4,1.433,1.433,0,0,1-.5-1.1,3.445,3.445,0,0,1,.1-.9l1.9-8.8a3.8,3.8,0,0,1,.9-1.8,2.814,2.814,0,0,1,2-.6h8.5l-.7,3.3H79.7a.749.749,0,0,0-.5.1.588.588,0,0,0-.2.5l-1.2,6v.2a.458.458,0,0,0,.5.4h3.4l.5-2.4H79.9l.5-2.5H86l-1.7,8Z"
+                        stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-13"></path>
+                    <path id="Path_14" data-name="Path 14"
+                        d="M85.6,102.9l.6-2.9h6.4c.2,0,.3,0,.4-.1s.1-.2.2-.4l.2-.9H88.1a2.269,2.269,0,0,1-1.3-.3,1.268,1.268,0,0,1-.4-.9,2.814,2.814,0,0,1,.1-.8l1.7-8.1h3.4l-1.5,6.9v.2c0,.2.1.3.4.3H94l1.6-7.4H99L96.3,101a2.633,2.633,0,0,1-.7,1.5,2.348,2.348,0,0,1-1.6.5H85.6Z"
+                        stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-14"></path>
+                    <path id="Path_15" data-name="Path 15"
+                        d="M112.1,98.7l1.4-6.7v-.2c0-.2-.1-.3-.4-.3h-2.4c-.4,0-.6.2-.6.5l-1.4,6.8h-3.4l1.4-6.7v-.2c0-.2-.1-.3-.4-.3h-2.4a.634.634,0,0,0-.6.5l-1.4,6.7H98.5l2.1-10.1h3.2l-.2,1.1a3.819,3.819,0,0,1,.9-.9,2.133,2.133,0,0,1,1.2-.3h3.2c1,0,1.5.4,1.6,1.1a3.24,3.24,0,0,1,.9-.8,2.016,2.016,0,0,1,1.1-.3h3.2a1.922,1.922,0,0,1,1.2.3,1.333,1.333,0,0,1,.4,1,1.7,1.7,0,0,1-.1.7l-1.7,8.1h-3.4Z"
+                        stroke="#000" stroke-miterlimit="10" stroke-width="1" class="svg-elem-15"></path>
+                </g>
+            </g>
+        </svg>
+
+    </div> -->
+
+    <div id="canada-page" class="cnt-page">
+
+        <!-- Nav Header Starts -->
+        <div class="nav-bar">
+            <div class="navbar-holder">
+                <div class="nav-left">
+                    <div class="container">
+                        <div class="left-holder">
+                            <a href="index.html" class="logo">
+                                <img src="assets/logo.png" alt="logo">
+                            </a>
+                            <nav>
+                                <ul>
+                                    <li class="drop-down">
+                                        <a class="nav-item">Features
+                                            <svg width="5" height="3" viewBox="0 0 5 3" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M0.749805 0.0996094L2.4998 1.84961L4.2498 0.0996094L4.9498 0.449609L2.4998 2.89961L0.0498047 0.449609L0.749805 0.0996094Z"
+                                                    fill="#333" />
+                                            </svg>
+
+                                        </a>
+                                        <div class="sub-menu-holder">
+                                            <ul class="sub-menu">
+                                                <li><a href="gym-client-management.html"> <i><img src="assets/client.png"></i> Client Management</a></li>
+                                                <li><a href="easygym-billing.html"><i><img src="assets/bill.png"></i> Billing</a></li>
+                                                <li><a href="bio-metric.html"><i><img src="assets/fingerprint.png"></i> Bio Metric</a></li>
+                                                <li><a href="gym-marketing.html"><i><img src="assets/megaphone.png"></i> Marketing</a></li>
+                                                <li><a href="easy-gym-reporting.html"><i><img src="assets/analytics.png"></i> Reporting</a></li>
+                                                <li><a href="class-booking.html"><i><img src="assets/booking.png"></i> Class Booking</a></li>
+                                                <li><a href="employee-management.html"><i><img src="assets/teamwork.png"></i> Employees</a></li>
+                                                <li><a href="gym-mobile-app.html"><i><img src="assets/mobile.png"></i> Mobile App</a></li>
+                                                <li><a href="point-of-sale.html"><i><img src="assets/discount.png"></i> Point of Sale</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="tutorials.html" class="nav-item">Tutorials</a>
+                                    </li>
+                                    <li><a href="blog.html" class="nav-item">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div class="container">
+                        <div class="right-holder">
+                            <nav>
+                                <ul>
+                                    <li><a href="#" class="nav-item">FAQs</a></li>
+                                    <li><a href="#" class="prm-btn white-border">Free Demo</a></li>
+                                    <li>
+                                        <a href="#" class="hamburger" disable>
+                                            <div class="center">
+                                                <div></div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Header Ends-->
+
+
+        <!-- Mobile Menu Ends-->
+        <div class="navbar-mob">
+            <ul>
+                <li class="drop-down-mob">
+                    <label for="mob-drop" href="features.html">Features<svg class="ms-2" width="5" height="3" viewBox="0 0 5 3" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.749805 0.0996094L2.4998 1.84961L4.2498 0.0996094L4.9498 0.449609L2.4998 2.89961L0.0498047 0.449609L0.749805 0.0996094Z"
+                                fill="#333" />
+                        </svg></label>
+                    <input type="checkbox" id="mob-drop">
+                    <div class="mob-menu-holder">
+                        <ul class="sub-menu">
+                            <li><a href="">Client Management</a></li>
+                            <li><a href="">Billing</a></li>
+                            <li><a href="">Bio Metric</a></li>
+                            <li><a href="">Marketing</a></li>
+                            <li><a href="">Reporting</a></li>
+                            <li><a href="">Class Booking</a></li>
+                            <li><a href="">Employees</a></li>
+                            <li><a href="">Mobile App</a></li>
+                            <li><a href="">Point of Sale</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="blog.html" class="nav-item">Blog</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu Ends-->
+
+
+        <!-- Hero Section Starts -->
+        <div class="hero-sec">
+            <div class="container">
+                <div class="header-text">
+                    <h1 class="heading-style">
+                        Gym Software<br><span class="cnt-text">India</span>
+                    </h1>
+                    <p>Gym management software that frees up your time and helps you grow.</p>
+                    <a href="#" class="prm-btn">Try For Free</a>
+                </div>
+                <img src="assets/country/usa-hero-img.png" alt="" class="cnt-hero-img">
+            </div>
+        </div>
+        <!-- Hero Section Ends -->
+
+
+
+        <!-- QR Section Starts -->
+        <div class="qr-sec">
+            <img src="assets/qr-sec-img.png" class="qr-img" alt="">
+            <div class="container-xl">
+                <div class="col-12">
+                    <img src="assets/qr-sec-img-mob.png" class="qr-img-mob" alt="">
+                </div>
+                <div class="col-lg-6 offset-lg-6">
+                    <div class="qr-text">
+                        <h1 class="heading-style" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                            Experience Revolutionary
+                            <br>QR Portal
+                        </h1>
+                        <div class="sm-head" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                            Scan & Experience
+                        </div>
+                        <p data-aos="fade-up" data-aos-duration="500" data-aos-once="true">No need to pay for mobile
+                            apps anymore.</p>
+
+                        <div class="qr-features">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="feat-box" data-aos="zoom-in" data-aos-duration="500"
+                                        data-aos-once="true" data-aos-delay="100">
+                                        <img src="assets/country/qr-feat-ca1.png" alt="">
+                                        <h2>Conviniet <br>Appointments</h2>
+                                        <p>Energistically negotiate effective web services after installed base sources.
+                                            Conveniently productivate.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feat-box" data-aos="zoom-in" data-aos-duration="500"
+                                        data-aos-once="true" data-aos-delay="400">
+                                        <img src="assets/country/qr-feat-ca2.png" alt="">
+                                        <h2>Showcase<br>
+                                            Offers & Gallery</h2>
+                                        <p>Enthusiastically mesh reliable products without sustainable resources
+                                            rapidiously seize.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feat-box" data-aos="zoom-in" data-aos-duration="500"
+                                        data-aos-once="true" data-aos-delay="700">
+                                        <img src="assets/country/qr-feat-ca3.png" alt="">
+                                        <h2>Self
+                                            Check-in</h2>
+                                        <p>Conveniently evolve cross-platform initiatives and interdependent technology
+                                            dynamically reliable.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feat-box" data-aos="zoom-in" data-aos-duration="500"
+                                        data-aos-once="true" data-aos-delay="900">
+                                        <img src="assets/country/qr-feat-ca4.png" alt="">
+                                        <h2>Reviews</h2>
+                                        <p>Enthusiastically disseminate granular schemas vis-a-vis timely collaboration
+                                            and idea-sharing evisculate.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- QR Section Ends -->
+
+
+
+        <!-- Booking Section Starts -->
+        <div class="booking-sec">
+            <img src="assets/booking-img.png" class="booking-img" alt="">
+            <div class="container">
+                <div class="col-12">
+                    <img src="assets/booking-img-full.png" class="booking-img-full" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="booking-text">
+                        <h1 class="heading-style" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                            Experience Revolutionary
+                            <br>QR Portal
+                        </h1>
+                        <p data-aos="fade-up" data-aos-duration="500" data-aos-once="true">Digitalize your client's
+                            experience with digital
+                            workout & diet plan. Your clients can easily
+                            book group classes & personal training online with gym management software.</p>
+
+
+
+                        <div class="accordion" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                            <div class="accordion-item">
+                                <input type="checkbox" id="book-ques1">
+                                <label class="accordion-link" for="book-ques1">
+                                    <div class="flex">
+                                        <h3 class="sm-head">All-embracing Sign-up Form</h3>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                fill="#1562D9" />
+                                        </svg>
+
+                                    </div>
+                                </label>
+                                <div class="answer">
+                                    <p> Let the customers see and choose everything they need in a comprehensive sign-up
+                                        form on your website. The details are captured in the gym management system and
+                                        you can create a customized bill in one click.
+                                    </p>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="accordion-item">
+                                <input type="checkbox" id="book-ques2">
+                                <label class="accordion-link" for="book-ques2">
+                                    <div class="flex">
+                                        <h3 class="sm-head">Group Class and Training Booking</h3>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                fill="#1562D9" />
+                                        </svg>
+
+                                    </div>
+                                </label>
+                                <div class="answer">
+                                    <p>Provide your customers the possibility to book their group classes, personal
+                                        training or any other service that your gym provides through the website or the
+                                        Android mobile APP.</p>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="accordion-item">
+                                <input type="checkbox" id="book-ques3">
+                                <label class="accordion-link" for="book-ques3">
+                                    <div class="flex">
+                                        <h3 class="sm-head">Client’s Vital Information</h3>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                fill="#1562D9" />
+                                        </svg>
+
+                                    </div>
+                                </label>
+                                <div class="answer">
+                                    <p>Let the clients be focused on their growth and produce more results by showing
+                                        them all the important information related to their workout plan, diet plan,
+                                        body measurement, etc.</p>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking Section Ends -->
+
+
+        <!-- Retain Section Starts -->
+        <div class="retain-sec">
+            <div class="container-xxl">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <!-- <div id="retain-svg"></div> -->
+                        <object data="assets/retain-client-img.svg" type="image/svg+xml" class="retain-svg"></object>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="booking-text">
+                            <h1 class="heading-style" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                                Experience
+                                Revolutionary <br>QR Portal</h1>
+                            <p data-aos="fade-up" data-aos-duration="500" data-aos-once="true">Digitalize your client's
+                                experience with
+                                digital workout & diet plan. Your clients can
+                                easily
+                                book group classes & personal training online with gym management software.</p>
+
+
+
+                            <div class="accordion" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="question1">
+                                    <label class="accordion-link" for="question1">
+                                        <div class="flex">
+                                            <h3 class="sm-head">All-embracing Sign-up Form</h3>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                    fill="#1562D9" />
+                                            </svg>
+
+                                        </div>
+                                    </label>
+                                    <div class="answer">
+                                        <p> Let the customers see and choose everything they need in a comprehensive
+                                            sign-up
+                                            form on your website. The details are captured in the gym management system
+                                            and
+                                            you can create a customized bill in one click.
+                                        </p>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="question2">
+                                    <label class="accordion-link" for="question2">
+                                        <div class="flex">
+                                            <h3 class="sm-head">Group Class and Training Booking</h3>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                    fill="#1562D9" />
+                                            </svg>
+
+                                        </div>
+                                    </label>
+                                    <div class="answer">
+                                        <p>Provide your customers the possibility to book their group classes, personal
+                                            training or any other service that your gym provides through the website or
+                                            the
+                                            Android mobile APP.</p>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="accordion-item">
+                                    <input type="checkbox" id="question3">
+                                    <label class="accordion-link" for="question3">
+                                        <div class="flex">
+                                            <h3 class="sm-head">Client’s Vital Information</h3>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M17.4799 6.54994L14.6399 3.70994C14.547 3.61621 14.4364 3.54182 14.3145 3.49105C14.1927 3.44028 14.062 3.41414 13.9299 3.41414C13.7979 3.41414 13.6672 3.44028 13.5454 3.49105C13.4235 3.54182 13.3129 3.61621 13.2199 3.70994C13.0337 3.8973 12.9291 4.15076 12.9291 4.41494C12.9291 4.67913 13.0337 4.93258 13.2199 5.11994L15.3399 7.23994L7.23994 15.3399L5.11994 13.2199C4.93258 13.0337 4.67913 12.9291 4.41494 12.9291C4.15076 12.9291 3.8973 13.0337 3.70994 13.2199C3.61621 13.3129 3.54182 13.4235 3.49105 13.5454C3.44028 13.6672 3.41414 13.7979 3.41414 13.9299C3.41414 14.062 3.44028 14.1927 3.49105 14.3145C3.54182 14.4364 3.61621 14.547 3.70994 14.6399L6.51994 17.4499L9.32994 20.2599C9.42256 20.3544 9.533 20.4296 9.65488 20.4811C9.77675 20.5326 9.90763 20.5594 10.0399 20.5599C10.2386 20.5611 10.433 20.5031 10.5986 20.3933C10.7641 20.2835 10.8931 20.1269 10.9693 19.9434C11.0455 19.76 11.0653 19.558 11.0262 19.3633C10.9872 19.1685 10.891 18.9898 10.7499 18.8499L8.65994 16.7599L16.7599 8.65994L18.8799 10.7799C18.9732 10.8725 19.0837 10.9458 19.2053 10.9957C19.3269 11.0455 19.4571 11.071 19.5885 11.0705C19.7199 11.07 19.8499 11.0437 19.9711 10.993C20.0923 10.9423 20.2024 10.8682 20.2949 10.7749C20.3875 10.6817 20.4608 10.5711 20.5107 10.4496C20.5605 10.328 20.586 10.1978 20.5855 10.0664C20.585 9.93501 20.5587 9.80499 20.508 9.68378C20.4573 9.56256 20.3832 9.45252 20.2899 9.35994L17.4799 6.54994ZM3.70994 17.4599C3.52164 17.2716 3.26624 17.1658 2.99994 17.1658C2.73364 17.1658 2.47824 17.2716 2.28994 17.4599C2.10164 17.6482 1.99585 17.9036 1.99585 18.1699C1.99585 18.4362 2.10164 18.6916 2.28994 18.8799L5.11994 21.7099C5.21338 21.8026 5.3242 21.8759 5.44603 21.9257C5.56787 21.9755 5.69833 22.0007 5.82994 21.9999C5.96155 22.0007 6.09201 21.9755 6.21385 21.9257C6.33569 21.8759 6.4465 21.8026 6.53994 21.7099C6.63367 21.617 6.70806 21.5064 6.75883 21.3845C6.8096 21.2627 6.83574 21.132 6.83574 20.9999C6.83574 20.8679 6.8096 20.7372 6.75883 20.6154C6.70806 20.4935 6.63367 20.3829 6.53994 20.2899L3.70994 17.4599ZM21.7099 5.11994L18.8799 2.28994C18.6916 2.10164 18.4362 1.99585 18.1699 1.99585C17.9036 1.99585 17.6482 2.10164 17.4599 2.28994C17.2716 2.47824 17.1658 2.73364 17.1658 2.99994C17.1658 3.26624 17.2716 3.52164 17.4599 3.70994L20.2899 6.53994C20.3829 6.63367 20.4935 6.70806 20.6154 6.75883C20.7372 6.8096 20.8679 6.83574 20.9999 6.83574C21.132 6.83574 21.2627 6.8096 21.3845 6.75883C21.5064 6.70806 21.617 6.63367 21.7099 6.53994C21.8037 6.44698 21.8781 6.33638 21.9288 6.21452C21.9796 6.09266 22.0057 5.96195 22.0057 5.82994C22.0057 5.69793 21.9796 5.56722 21.9288 5.44536C21.8781 5.32351 21.8037 5.2129 21.7099 5.11994Z"
+                                                    fill="#1562D9" />
+                                            </svg>
+
+                                        </div>
+                                    </label>
+                                    <div class="answer">
+                                        <p>Let the clients be focused on their growth and produce more results by
+                                            showing
+                                            them all the important information related to their workout plan, diet plan,
+                                            body measurement, etc.</p>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Retain Section Ends -->
+
+
+        <!-- Testimonials Starts -->
+        <div class="testimonial-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="test-text">
+                            <h1 class="heading-style">
+                                Easy Gym Our Gym Management Software is trusted by leading gym & fitness studio chains
+                                worldwide.
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="test-box">
+                                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_194_41)">
+                                            <path
+                                                d="M6.26559 12.5048V14.6782H11.6954V26.3733H0V14.6782H0.00028268V12.5048C0.00028268 8.09147 1.27008 4.81436 3.77462 2.76395C5.50716 1.3456 7.70019 0.626465 10.2929 0.626465V6.89149C8.88547 6.89149 6.26559 6.89149 6.26559 12.5048ZM25.5976 6.89149V0.626465C23.005 0.626465 20.812 1.3456 19.0795 2.76395C16.5749 4.81436 15.305 8.09161 15.305 12.5048V14.6782V26.3733H27V14.6782H21.5701V12.5048C21.5703 6.89149 24.1902 6.89149 25.5976 6.89149Z"
+                                                fill="#1562D9" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_194_41">
+                                                <rect width="27" height="27" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <p class="test-text">Excellent software. Easy to use also very good support from the
+                                        staffs. Really appreciate the effort they have taken.</p>
+                                    <span class="author">
+                                        - Anil Raj, <b>Tiger Gym</b>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="test-box">
+                                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_194_41)">
+                                            <path
+                                                d="M6.26559 12.5048V14.6782H11.6954V26.3733H0V14.6782H0.00028268V12.5048C0.00028268 8.09147 1.27008 4.81436 3.77462 2.76395C5.50716 1.3456 7.70019 0.626465 10.2929 0.626465V6.89149C8.88547 6.89149 6.26559 6.89149 6.26559 12.5048ZM25.5976 6.89149V0.626465C23.005 0.626465 20.812 1.3456 19.0795 2.76395C16.5749 4.81436 15.305 8.09161 15.305 12.5048V14.6782V26.3733H27V14.6782H21.5701V12.5048C21.5703 6.89149 24.1902 6.89149 25.5976 6.89149Z"
+                                                fill="#1562D9" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_194_41">
+                                                <rect width="27" height="27" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <p class="test-text">Excellent software. Easy to use also very good support from the
+                                        staffs. Really appreciate the effort they have taken.</p>
+                                    <span class="author">
+                                        - Anil Raj, <b>Tiger Gym</b>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="test-box">
+                                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_194_41)">
+                                            <path
+                                                d="M6.26559 12.5048V14.6782H11.6954V26.3733H0V14.6782H0.00028268V12.5048C0.00028268 8.09147 1.27008 4.81436 3.77462 2.76395C5.50716 1.3456 7.70019 0.626465 10.2929 0.626465V6.89149C8.88547 6.89149 6.26559 6.89149 6.26559 12.5048ZM25.5976 6.89149V0.626465C23.005 0.626465 20.812 1.3456 19.0795 2.76395C16.5749 4.81436 15.305 8.09161 15.305 12.5048V14.6782V26.3733H27V14.6782H21.5701V12.5048C21.5703 6.89149 24.1902 6.89149 25.5976 6.89149Z"
+                                                fill="#1562D9" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_194_41">
+                                                <rect width="27" height="27" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <p class="test-text">Excellent software. Easy to use also very good support from the
+                                        staffs. Really appreciate the effort they have taken.</p>
+                                    <span class="author">
+                                        - Anil Raj, <b>Tiger Gym</b>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="test-box">
+                                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_194_41)">
+                                            <path
+                                                d="M6.26559 12.5048V14.6782H11.6954V26.3733H0V14.6782H0.00028268V12.5048C0.00028268 8.09147 1.27008 4.81436 3.77462 2.76395C5.50716 1.3456 7.70019 0.626465 10.2929 0.626465V6.89149C8.88547 6.89149 6.26559 6.89149 6.26559 12.5048ZM25.5976 6.89149V0.626465C23.005 0.626465 20.812 1.3456 19.0795 2.76395C16.5749 4.81436 15.305 8.09161 15.305 12.5048V14.6782V26.3733H27V14.6782H21.5701V12.5048C21.5703 6.89149 24.1902 6.89149 25.5976 6.89149Z"
+                                                fill="#1562D9" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_194_41">
+                                                <rect width="27" height="27" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                    <p class="test-text">Excellent software. Easy to use also very good support from the
+                                        staffs. Really appreciate the effort they have taken.</p>
+                                    <span class="author">
+                                        - Anil Raj, <b>Tiger Gym</b>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="test-bottom"></div>
+        </div>
+        <!-- Testimonials Ends -->
+
+
+        <!-- Footer Starts -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div>
+                            <h3>Affordable & Easy to use Gym & Fitness center software.</h3>
+                            <p>Easy gym software is trusted by 900+ gyms, fitness centers, Zumba, Crossfit, Pilates
+                                studios in India, Saudi Arab, Qatar, Dubai, Nigeria, Malaysia, Singapore & Philippines.
+                                Continuous upgrades in features & technologies made Easy Gym Software one of the best
+                                gym software. Easy gym is customized to make it fit for your business & it is affordable
+                                too.</p>
+                            <a href="" class="prm-btn">Free Demo</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <h3>Navigation</h3>
+                            <ul>
+                                <li><a href="tutorials.html">Free Trial</a></li>
+                                <li><a href="sitemap.html">Sitemap</a></li>
+                                <li><a href="term-conditions.html">Terms & Conditions</a></li>
+                                <li><a href="policy.html">Privacy Policy</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Countries we serve in</h3>
+                            <ul class="cnt-list">
+                                <li><a href="usa.html">USA <object data="assets/us.svg" type="image/svg+xml"></object></a></li>
+                                <li><a href="canada.html">Canada <object data="assets/ca.svg" type="image/svg+xml"></object></a></li>
+                                <li><a href="africa.html">Africa <object data="assets/za.svg" type="image/svg+xml"></object></a></li>
+                                <li><a href="qatar.html">Qatar <object data="assets/qa.svg" type="image/svg+xml"></object></a></li>
+                                <li><a href="india.html">India <object data="assets/in.svg" type="image/svg+xml"></object></a></li>
+                                <li><a href="malaysia.html">Malaysia <object data="assets/my.svg" type="image/svg+xml"></object></a></li>
+                                <li><a href="singapore.html">Singapore <object data="assets/sg.svg" type="image/svg+xml"></object></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <h3>Top Features</h3>
+                            <ul>
+                                <li><a href="gym-client-management.html">Client Management</a></li>
+                                <li><a href="easygym-billing.html">GST & Non-GST Billing</a></li>
+                                <li><a href="bio-metric.html">Biometric Integration</a></li>
+                                <li><a href="point-of-sale.html">POS Billing</a></li>
+                                <li><a href="class-booking.html">Group Class Booking</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="social">
+                                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                            <h3>Subscribe to our Newsletter</h3>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Email">
+                                <a href="" class="prm-btn">Subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Ends -->
+
+
+    </div>
+
+
+
+
+    <!-- Jquery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Bootstrap v5.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Loader Js -->
+    <script>
+        // Loader
+        // document.body.style.overflow = 'hidden';
+        // document.body.style.height = '100vh';
+        // setTimeout(() => {
+        //     jQuery(document).ready(function () {
+        //         jQuery("#preloader").addClass('remove');
+        //         document.body.style.overflow = 'auto';
+        //         document.body.style.height = 'auto';
+        //     });
+        // }, 3000);
+    </script>
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

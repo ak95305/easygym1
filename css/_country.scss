@@ -1,0 +1,316 @@
+
+
+/*==================================================================================*/
+/*============================== USA Page =====================================*/
+/*==================================================================================*/
+#usa-page,
+.cnt-page {
+
+    .nav-bar .left-holder ul,
+    .nav-bar .nav-right ul {
+        color: #333;
+        font-weight: 600;
+
+        .prm-btn {
+            border-width: 2px;
+            border-color: #333;
+            color: #333;
+            font-weight: 600;
+        }
+
+    }
+
+    .nav-bar .hamburger .center:before,
+    .nav-bar .hamburger .center:after,
+    .nav-bar .hamburger .center div {
+        background: #333;
+    }
+
+    .hero-sec {
+        height: 100vh;
+        background-image: url(../assets/country/usa-hero-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+        position: relative;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .header-text {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom: 0;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .heading-style {
+                margin: auto;
+                font-weight: 800;
+                color: #333;
+                font-size: 75px;
+                line-height: 1;
+
+                .cnt-text {
+                    color: #BF0A30;
+                }
+            }
+
+            .prm-btn {
+                background-color: #BF0A30;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+        .cnt-hero-img {
+            width: 700px;
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #BF0A30;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #BF0A30;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(../assets/country/test-us-bottom.png);
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .cnt-page .hero-sec {
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .cnt-page .hero-sec .header-text .heading-style {
+        font-size: 60px;
+    }
+}
+
+
+
+
+
+/*==================================================================================*/
+/*============================== Africa Page =====================================*/
+/*==================================================================================*/
+#africa-page {
+    .hero-sec {
+        background-image: url(../assets/country/africa-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #00843E;
+            }
+
+            .prm-btn {
+                background-color: #00843E;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #00843E;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #00843E;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(../assets/country/test-af-bottom.png);
+    }
+}
+
+
+
+
+/*==================================================================================*/
+/*============================== Canada Page =====================================*/
+/*==================================================================================*/
+#canada-page {
+    .hero-sec {
+        background-image: url(../assets/country/canada-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #D80621;
+            }
+
+            .prm-btn {
+                background-color: #D80621;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #D80621;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #D80621;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(../assets/country/test-ca-bottom.png);
+    }
+}
+
+
+
+
+/*==================================================================================*/
+/*============================== Qatar Page =====================================*/
+/*==================================================================================*/
+#qatar-page {
+    .hero-sec {
+        background-image: url(../assets/country/qatar-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #8A1538;
+            }
+
+            .prm-btn {
+                background-color: #8A1538;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #8A1538;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #8A1538;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(../assets/country/test-qt-bottom.png);
+    }
+}
+
+
+
+
+
+/*==================================================================================*/
+/*============================== Malaysia Page =====================================*/
+/*==================================================================================*/
+#malaysia-page {
+    .hero-sec {
+        background-image: url(../assets/country/malaysia-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #0032A0;
+            }
+
+            .prm-btn {
+                background-color: #0032A0;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #0032A0;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #0032A0;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(../assets/country/test-ml-bottom.png);
+    }
+}
+
+
+
+
+
+
+/*==================================================================================*/
+/*============================== Singapore Page =====================================*/
+/*==================================================================================*/
+#singapore-page {
+    .hero-sec {
+        background-image: url(../assets/country/singapore-hero-bg.png);
+
+        .header-text {
+            .cnt-text {
+                color: #EE2536;
+            }
+
+            .prm-btn {
+                background-color: #EE2536;
+            }
+        }
+
+    }
+
+
+    .accordion-link {
+        svg path {
+            fill: #EE2536;
+        }
+    }
+
+    .test-box {
+        svg path {
+            fill: #EE2536;
+        }
+    }
+
+    .test-bottom {
+        background-image: url(../assets/country/test-sg-bottom.png);
+    }
+}

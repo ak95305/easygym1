@@ -1,0 +1,207 @@
+/*==================================================================================*/
+/*============================== Software Page =====================================*/
+/*==================================================================================*/
+.soft-page {
+
+    .nav-bar .left-holder ul,
+    .nav-bar .nav-right ul {
+        color: #333;
+        font-weight: 600;
+
+        .prm-btn {
+            border-width: 2px;
+            border-color: #333;
+            color: #333;
+            font-weight: 600;
+        }
+
+    }
+
+    .nav-bar .hamburger .center:before,
+    .nav-bar .hamburger .center:after,
+    .nav-bar .hamburger .center div {
+        background: #333;
+    }
+
+
+    .soft-hero {
+        // height: 100vh;
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+
+        .heading-style {
+            font-size: 55px;
+        }
+
+        .blue-text {
+            color: #1562D9;
+            font-weight: 700;
+            margin-top: 100px;
+            display: block;
+        }
+
+        .prm-btn {
+            margin-top: 50px;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .sec {
+        padding: 100px 0;
+    }
+
+
+
+}
+
+
+.why-choose{
+
+    .heading-style{
+        font-size: 40px;
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .steps-holder{
+        padding: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        background-image: url(../assets/software/step-holder-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+
+        .step{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            
+            .step-head{
+                font-weight: 700;
+                color: #333;
+                margin-top: 2px;
+                font-size: 18px;
+            }
+            
+            
+            &:nth-child(1){
+                margin-top: 20px;
+                box-shadow: 0 10px 15px 0 #1562D91a;
+            }
+            &:nth-child(2){
+                margin-top: 230px;
+                box-shadow: 0 10px 15px 0 #C93A4C1a;
+            }
+            &:nth-child(3){
+                margin-top: 0;
+                box-shadow: 0 10px 15px 0 #F5852B1a;
+            }
+            &:nth-child(4){
+                margin-top: 200px;
+                box-shadow: 0 10px 15px 0 #298E331a;
+            }
+
+        }
+
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1199px) {
+    .why-choose .steps-holder .step:nth-child(4){
+        margin-top: 170px;
+    }
+    .why-choose .steps-holder .step:nth-child(2){
+        margin-top: 190px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .soft-page .soft-hero {
+        display: block;
+        height: auto;
+        padding-top: 60px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .soft-page .sec .sec-img{
+        margin-bottom: 30px;
+    }
+    .soft-page .soft-hero .blue-text{
+        margin-top: 0;
+    }
+    .hero-img{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media only screen and (min-width: 991px) {
+    .hero-img{
+        margin-top: 50px;
+    }
+}
+
+
+@media only screen and (min-width: 1440px) {
+    .soft-page .soft-hero {
+        display: block;
+        height: auto;
+        padding-top: 140px;
+        margin-bottom: 100px;
+    }
+
+    .soft-page .sec .sec-img{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media only screen and (min-height: 850px) {
+    .soft-page .soft-hero {
+        display: block;
+        height: auto;
+        padding-top: 140px;
+        margin-bottom: 100px;
+    }
+
+    .soft-page .sec .sec-img{
+        margin-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .soft-page .soft-hero .heading-style{
+        font-size: 35px;
+    }
+    .soft-page .sec .heading-style{
+        font-size: 25px;
+    }
+    .why-choose .steps-holder{
+        background-image: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .why-choose .steps-holder .step:nth-child(n){
+        margin: 10px auto;
+        width: 120px;
+        height: 120px;
+    }
+}
